@@ -1,110 +1,128 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/bae.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <title>Document</title>
-  </head>
 
-  <body>
-    <div class="fram">
-      <div class="eft">
-        <!-- 얼굴 사진 -->
-        <div class="face">
-          <img src="/img/bae.png" alt="" />
-        </div>
-        <!-- 이름과 꿈 -->
-        <div class="name">
-          <h1>
-            안녕하세요! 제이름은 배성완 <br />
-            <strong>FE 개발자</strong>를 꿈꾸고 있습니다.
-          </h1>
-        </div>
-      </div>
-      <!-- 저는 바리스타였어요 -->
-      <div class="content-box">
-        <div class="con" data-aos="flip-left">
-          <img id="con-img" src="/img/star.jpeg" alt="" />
-        </div>
-        <div class="con1" data-aos="flip-left">
-          <h1>저는 바리스타였어요!</h1>
-          <p>
-            3년간 바리스타를 하다가 <br />FE개발자가 되려고 도전하고 있어요
-            <br />
-            바리스타도 비전공에서 시작한거라서 3년간 굉장히 많은 공부를 했어요<br />
-            커피에 대해서 궁금한게 있다면 언제든지 물어봐 주세요 ^^
-          </p>
-        </div>
-      </div>
-      <!-- 제 목표는요 -->
-      <div class="content-box2">
-        <div class="con3" data-aos="flip-left">
-          <img src="/img/go.jpeg" alt="" />
-        </div>
-        <div class="con4" data-aos="flip-left">
-          <h1>제 목표는요!</h1>
-          <p>
-            혼자서 척척 해나갈수 있는 개발자가 되고싶어요<br />
-            비전공자라서 어려움도 많지만 모든지 할수 있다고 생각해요<br />
-            어려운건 단지 간단한 장애물이라고 생각해서 열심히만 한다면 <br />
-            FE 개발자가 될수 있다고 생각해요
-          </p>
-        </div>
-      </div>
-      <!-- 제 장점은요 -->
-      <div class="content-box3">
-        <div class="con5" data-aos="fade-right">
-          <img src="/img/good.png" alt="" />
-        </div>
-        <div class="con6" data-aos="fade-right">
-          <h1>제 장점은요!</h1>
-          <p>
-            꾸준함을 이길 그 어떤 재주도 없다" 라는 <br />
-            신념을 가지고 어떤 일이든 결과가 나타날 때까지<br />
-            끈질기게 파고듭니다
-          </p>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-      <!-- 좋아하는것 -->
-      <div class="content-box4">
-        <div class="con3" data-aos="fade-left">
-          <img src="/img/빵꾸.jpeg" alt="" />
-        </div>
-        <div class="con4" data-aos="fade-left">
-          <h1>제가 좋아하는것은요!</h1>
-          <p>
-            여자친구네 고양이 빵꾸에요 <br />
-            세상에서 제일 온순한 고양이에요<br />
-            사람만 보이면 만져달라구 쪼르르와요ㅎㅎ
-          </p>
-        </div>
-      </div>
+  <link rel="stylesheet" href="/css/bae.css" />
+  <link rel="stylesheet" href="../css/goal.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-      <!-- 마지막 -->
-      <footer class="footer">
-        <div class="con7" data-aos="flip-down">
-          <a href="https://github.com/baesee0806"><i class="fa-brands fa-github"></i></a>
-          <a href="https://velog.io/@baesee0806"><i class="fa-solid fa-cube"></i></a>
-        </div>
-        <div class="con8" data-aos="flip-down">
-          <h2>마지막으로!</h2>
-          <p>
-            4개월 정말 긴 시간이라고 생각해요 <br />
-            내배캠에서 배운 지식들을 모두 내꺼로 만들고 <br />
-            그리고 제가 좋아하는 회사로 취업을 꼭 할거에요<br />
-            다들 포기 하지 말고 열심히 해봐요
-          </p>
-        </div>
-      </footer>
+  <!-- gsap 애니메이션 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"
+    integrity="sha512-Eenw6RBFiF4rO89LCaB5fkd4WXI4Y7GSRxrLMMWx73dZNcl+dBU3/pJtITD2gTCoEGIf/Ph3spwp0zZnF+UEJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script defer src="../js/goal.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="fram">
+    <div class="eft">
+      <!-- 얼굴 사진 -->
+      <div class="face">
+        <img src="/img/bae.png" alt="" />
+      </div>
+      <!-- 이름과 꿈 -->
+      <div class="name">
+        <h1>
+          안녕하세요! 제이름은 배성완 <br />
+          <strong>FE 개발자</strong>를 꿈꾸고 있습니다.
+        </h1>
+      </div>
     </div>
-    <script src="https://kit.fontawesome.com/a4c06b86b3.js" crossorigin="anonymous"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
+    <!-- 저는 바리스타였어요 -->
+    <div class="content-box">
+      <div class="con" data-aos="flip-left">
+        <img id="con-img" src="/img/star.jpeg" alt="" />
+      </div>
+      <div class="con1" data-aos="flip-left">
+        <h1>저는 바리스타였어요!</h1>
+        <p>
+          3년간 바리스타를 하다가 <br />FE개발자가 되려고 도전하고 있어요
+          <br />
+          바리스타도 비전공에서 시작한거라서 3년간 굉장히 많은 공부를 했어요<br />
+          커피에 대해서 궁금한게 있다면 언제든지 물어봐 주세요 ^^
+        </p>
+      </div>
+    </div>
+    <!-- 제 목표는요 -->
+    <div class="content-box2">
+      <div class="con3" data-aos="flip-left">
+        <img src="/img/go.jpeg" alt="" />
+      </div>
+      <div class="con4" data-aos="flip-left">
+        <h1>제 목표는요!</h1>
+        <p>
+          혼자서 척척 해나갈수 있는 개발자가 되고싶어요<br />
+          비전공자라서 어려움도 많지만 모든지 할수 있다고 생각해요<br />
+          어려운건 단지 간단한 장애물이라고 생각해서 열심히만 한다면 <br />
+          FE 개발자가 될수 있다고 생각해요
+        </p>
+      </div>
+    </div>
+    <!-- 제 장점은요 -->
+    <div class="content-box3">
+      <div class="con5" data-aos="fade-right">
+        <img src="/img/good.png" alt="" />
+      </div>
+      <div class="con6" data-aos="fade-right">
+        <h1>제 장점은요!</h1>
+        <p>
+          꾸준함을 이길 그 어떤 재주도 없다" 라는 <br />
+          신념을 가지고 어떤 일이든 결과가 나타날 때까지<br />
+          끈질기게 파고듭니다
+        </p>
+      </div>
+    </div>
+
+    <!-- 좋아하는것 -->
+    <div class="content-box4">
+      <div class="con3" data-aos="fade-left">
+        <img src="/img/빵꾸.jpeg" alt="" />
+      </div>
+      <div class="con4" data-aos="fade-left">
+        <h1>제가 좋아하는것은요!</h1>
+        <p>
+          여자친구네 고양이 빵꾸에요 <br />
+          세상에서 제일 온순한 고양이에요<br />
+          사람만 보이면 만져달라구 쪼르르와요ㅎㅎ
+        </p>
+      </div>
+    </div>
+
+    <!-- 마지막 -->
+    <footer class="footer">
+      <div class="con7" data-aos="flip-down">
+        <a href="https://github.com/baesee0806"><i class="fa-brands fa-github"></i></a>
+        <a href="https://velog.io/@baesee0806"><i class="fa-solid fa-cube"></i></a>
+      </div>
+      <div class="con8" data-aos="flip-down">
+        <h2>마지막으로!</h2>
+        <p>
+          4개월 정말 긴 시간이라고 생각해요 <br />
+          내배캠에서 배운 지식들을 모두 내꺼로 만들고 <br />
+          그리고 제가 좋아하는 회사로 취업을 꼭 할거에요<br />
+          다들 포기 하지 말고 열심히 해봐요
+        </p>
+      </div>
+    </footer>
+    <div id="to-top">
+      <div class="material-icons">arrow_upward</div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/a4c06b86b3.js" crossorigin="anonymous"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>

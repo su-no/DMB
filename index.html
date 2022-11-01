@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>돈 많은 백수들</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./css/index.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <!-- 1.Navbar Section-->
-    <nav class="navbar">
-      <div class="navbar__logo"><a href="">돈 많 백</a></div>
-      <ul class="navbar__menu">
-        <a href="/index.html">
-          <li>돈많백?</li>
-        </a>
-        <a href="/public/tmi.html">
-          <li>팀원TMI</li>
-        </a>
-        <a href="/public/goal.html">
-          <li>목표</li>
-        </a>
-        <a href="">
-          <li>방명록</li>
-        </a>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>돈 많은 백수들</title>
 
-<!--2.Content Section-->
-<div class="about-content">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"
+    integrity="sha512-Eenw6RBFiF4rO89LCaB5fkd4WXI4Y7GSRxrLMMWx73dZNcl+dBU3/pJtITD2gTCoEGIf/Ph3spwp0zZnF+UEJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/goal.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- 1.Navbar Section-->
+  <nav class="navbar">
+    <div class="navbar__logo"><a href="">돈 많 백</a></div>
+    <ul class="navbar__menu">
+      <a href="/index.html">
+        <li>돈많백?</li>
+      </a>
+      <a href="/public/tmi.html">
+        <li>팀원TMI</li>
+      </a>
+      <a href="/public/goal.html">
+        <li>목표</li>
+      </a>
+      <a href="">
+        <li>방명록</li>
+      </a>
+    </ul>
+  </nav>
+
+  <!--2.Content Section-->
+  <div class="about-content">
     <div class="content">
       <div class="dmb">
         <h1>
@@ -51,125 +64,133 @@
     </div>
   </div>
 
-    <!--3.Dynamic Section-->
-    <div class="dynamic-container">
+  <!--3.Dynamic Section-->
+  <div class="dynamic-container">
     <div class="dynamic-g">
       <p class="lg-text">우리는</p>
       &nbsp
-      <h1><p id="dynamic" class="lg-text"></p></h1>
+      <h1>
+        <p id="dynamic" class="lg-text"></p>
+      </h1>
       <p class="lg-text">꿈꾸는 새로운 개발자</p>
     </div>
   </div>
-    </div>
-
-      <!--4.Keyword Section-->
-      <div class="keyword_section">
-            <div class="keyword_inner">
-            </div>
-          <div class="keyword_txt_section">
-            <div class="keyword_txt">
-              <p class="title">돈많백 정체성 키워드</p>
-            </div>
-          </div>
-          <div class="module_wrap">
-            <img src="/img/passthrough.png" width="2200" height="568">
-          </div>
-          <div class="purpose_row">
-            <strong class="purpose_txt">
-              <div class="purpose1_txt">
-              소통과 협동을 바탕으로 도전하는
-              <br>
-            </div>
-            <div class="purpose2_txt">
-            DON 많은 백수들
-              <br>
-            </div>
-            </strong>
-            </div>
-    </div>
   </div>
 
-      <!--5.Slideshow Section-->
-      <div class="intro_txt_section">
-        <p class="title">돈많백 팀원 소개</p>
+  <!--4.Keyword Section-->
+  <div class="keyword_section">
+    <div class="keyword_inner">
+    </div>
+    <div class="keyword_txt_section">
+      <div class="keyword_txt">
+        <p class="title">돈많백 정체성 키워드</p>
+      </div>
+    </div>
+    <div class="module_wrap">
+      <img src="/img/passthrough.png" width="2200" height="568">
+    </div>
+    <div class="purpose_row">
+      <strong class="purpose_txt">
+        <div class="purpose1_txt">
+          소통과 협동을 바탕으로 도전하는
+          <br>
         </div>
-
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="/img/park.png" style="width:280px"; height="290px"/>
-            <div class="name">박진양</div>
-            <div class="desc">돈많백은 청춘이다. 
-              완벽한 정답은 모르지만 계속 찾고 있습니다.
-              <br>
-              한명한명 용기를 내어 새로운 도전을 하고 있습니다.
-              <br>
-              돈많백은 그 과정에서 조금씩 커져가는 우주였으면 좋겠다.
-          </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img src="/img/bae.png" style="width:313px"; height="391px"/>
-            <div class="name">배성완</div>
-            <div class="desc">돈많백은 낭만이다.
-              <br>
-              모두 각자의 꿈을 이루고자 팀을 이뤘으며, 
-              <br>
-              그 꿈을 이루기 위해 오늘도 우리는 힘을 합쳐서 달려간다.
-          </div>
+        <div class="purpose2_txt">
+          DON 많은 백수들
+          <br>
         </div>
+      </strong>
+    </div>
+  </div>
+  </div>
 
-          <div class="swiper-slide">
-            <img src="/img/sung.png" style="width:313px"; height="391px"/>
-            <div class="name">성효진</div>
-            <div class="desc">돈많백은 YOLO다.
-              <br>
-              한 번 뿐인 인생, 주도적인 삶을 위해 도전하고 있습니다.
-              <br>
-              돈과 시간의 제약을 벗어나서 하고 싶은 일 다 할 수 있는 그날까지!
-          </div>
-          </div>
+  <!--5.Slideshow Section-->
+  <div class="intro_txt_section">
+    <p class="title">돈많백 팀원 소개</p>
+  </div>
 
-          <div class="swiper-slide">
-            <img src="/img/lee.PNG" style="width:313px"; height="391px"/>
-            <div class="name">이학경</div>
-            <div class="desc">돈많백은 낭만이다.
-              <br>
-              모두 각자의 꿈을 이루고자 팀을 이뤘으며, 
-              <br>
-              그 꿈을 이루기 위해 오늘도 우리는 힘을 합쳐서 달려간다.
-          </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img src="/img/kim.png" style="width:313px"; height="391px"/>
-            <div class="name">김민성</div>
-            <div class="desc">돈많백은 YOLO다.
-              <br>
-              한 번 뿐인 인생, 주도적인 삶을 위해 도전하고 있습니다.
-              <br>
-              돈과 시간의 제약을 벗어나서 하고 싶은 일 다 할 수 있는 그날까지!
-          </div>
-          </div>
-
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="/img/park.png" style="width:280px" ; height="290px" />
+        <div class="name">박진양</div>
+        <div class="desc">돈많백은 청춘이다.
+          완벽한 정답은 모르지만 계속 찾고 있습니다.
+          <br>
+          한명한명 용기를 내어 새로운 도전을 하고 있습니다.
+          <br>
+          돈많백은 그 과정에서 조금씩 커져가는 우주였으면 좋겠다.
         </div>
+      </div>
 
-          <!--6.Controller btn Section-->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+      <div class="swiper-slide">
+        <img src="/img/bae.png" style="width:313px" ; height="391px" />
+        <div class="name">배성완</div>
+        <div class="desc">돈많백은 낭만이다.
+          <br>
+          모두 각자의 꿈을 이루고자 팀을 이뤘으며,
+          <br>
+          그 꿈을 이루기 위해 오늘도 우리는 힘을 합쳐서 달려간다.
         </div>
-        
-        <script type="module" src="./js/index.js"></script>
-        <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+      </div>
 
-        <!--7 .Swiper script-->
-        <script>
-          const swiper = new Swiper(".mySwiper", {
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-          </script>
-  </body>
+      <div class="swiper-slide">
+        <img src="/img/sung.png" style="width:313px" ; height="391px" />
+        <div class="name">성효진</div>
+        <div class="desc">돈많백은 YOLO다.
+          <br>
+          한 번 뿐인 인생, 주도적인 삶을 위해 도전하고 있습니다.
+          <br>
+          돈과 시간의 제약을 벗어나서 하고 싶은 일 다 할 수 있는 그날까지!
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="/img/lee.PNG" style="width:313px" ; height="391px" />
+        <div class="name">이학경</div>
+        <div class="desc">돈많백은 낭만이다.
+          <br>
+          모두 각자의 꿈을 이루고자 팀을 이뤘으며,
+          <br>
+          그 꿈을 이루기 위해 오늘도 우리는 힘을 합쳐서 달려간다.
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="/img/kim.png" style="width:313px" ; height="391px" />
+        <div class="name">김민성</div>
+        <div class="desc">돈많백은 YOLO다.
+          <br>
+          한 번 뿐인 인생, 주도적인 삶을 위해 도전하고 있습니다.
+          <br>
+          돈과 시간의 제약을 벗어나서 하고 싶은 일 다 할 수 있는 그날까지!
+        </div>
+      </div>
+
+    </div>
+
+    <!--6.Controller btn Section-->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <div id="to-top">
+    <div class="material-icons">arrow_upward</div>
+  </div>
+
+  <script type="module" src="./js/index.js"></script>
+  <script type="module" src="./js/goal.js"></script>
+  <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+
+  <!--7 .Swiper script-->
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+
 </html>
