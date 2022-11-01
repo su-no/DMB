@@ -30,8 +30,8 @@ a {
 }
 
 /* .navbar__menu a {
-  width: 100%;
-} */
+    width: 100%;
+  } */
 
 .navbar__menu li {
   padding: 8px 12px;
@@ -43,6 +43,24 @@ a {
   padding: 8px 12px;
   background-color: black;
   border-radius: 8px;
+}
+
+.dynamic-g {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  background: grey;
+}
+.lg-text {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#dynamic {
+  color: red;
 }
 
 @media screen and (max-width: 768px) {
