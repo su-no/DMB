@@ -1,0 +1,156 @@
+
+/* 이모지 영역 */
+.face{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.face img{
+    width: 300px;
+}
+
+
+
+
+/* 이름과 꿈 영역 */
+.name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e2e2e2;
+    height: 80vh;
+}
+
+
+
+
+/* 저는 바리스타였어요 */
+.content-box {
+    display: flex;
+    justify-content: space-around;
+    height: 600px;
+}
+.con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con img{
+
+    width: 200px;
+    border-radius: 20%;
+}
+.con1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+
+    text-align: center;
+}
+
+
+
+
+
+/* 제 목표는요 */
+.content-box2{
+    display: flex;
+    justify-content: space-around;
+    flex-direction:row-reverse;
+    height: 600px;
+    background: #e2e2e2;
+}
+.con3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con3 img{
+    width: 300px;
+    border-radius: 20%;
+}
+.con4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    text-align: center;
+}
+
+
+
+
+
+
+/* 제 장점은요 */
+.content-box3 {
+    display: flex;
+    justify-content: space-around;
+    height: 600px;
+}
+
+
+.con5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.con5 img{
+
+    width: 200px;
+    border-radius: 20%;
+}
+.con6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    text-align: center;
+}
+
+/* 좋아하는것 */
+.content-box4{
+    display: flex;
+    justify-content: space-around;
+    flex-direction:row-reverse;
+    height: 600px;
+    background: #e2e2e2;
+}
+
+
+
+
+
+
+/* 마지막 부분 */
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+ 
+}
+
+.con7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 5rem;
+    letter-spacing:1rem;
+}
+.con7 a{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.con8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    text-align: center;
+}
