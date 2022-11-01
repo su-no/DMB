@@ -66,7 +66,7 @@ p {
 }
 
 .content {
-  background-color: #efefef;
+  background-color: #e2e2e2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,11 +137,10 @@ p {
   text-align: center;
 }
 
-.member__details,
-.member__github {
+.member__details {
   font-size: 20px;
-  color: white;
-  background-color: black;
+  background-color: white;
+  color: black;
   border: 1px solid black;
   border-radius: 18px;
   box-sizing: border-box;
@@ -149,26 +148,9 @@ p {
   margin: 0 5px;
 }
 
-.member__details {
-  background-color: white;
-  color: black;
-}
-
 .member__details:hover {
   background-color: #f58a41;
   border: 1px solid #f58a41;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.member__github a {
-  color: white;
-}
-
-.member__github:hover {
-  background-color: #247fea;
-  border: 1px solid #247fea;
   color: white;
   cursor: pointer;
   transition: 0.3s;

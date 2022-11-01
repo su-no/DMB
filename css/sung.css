@@ -1,0 +1,157 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #e2e2e2;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  line-height: 150%;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  padding-bottom: 20px;
+  padding: 10px 0;
+  line-height: 120%;
+}
+
+.container {
+  /* width: 400px; */
+  padding: 300px 0;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 400px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+}
+
+.description {
+  padding: 0 40px;
+}
+
+.profile-img {
+  width: 300px;
+}
+
+.follow-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.follow-link {
+  font-size: 30px;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  margin: 0 10px;
+}
+
+.github {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+
+.github:hover {
+  background-color: #373737;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.velog {
+  background-color: #20c997;
+  color: black;
+  border: 1px solid black;
+}
+
+.velog:hover {
+  background-color: #71eac5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.email {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.email:hover {
+  background-color: #dedede;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 200px 0;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+  }
+
+  .title {
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    padding: 0 10px;
+  }
+
+  .profile-img {
+    width: 200px;
+  }
+
+  .follow-link {
+    font-size: 20px;
+    border-radius: 24px;
+    box-sizing: border-box;
+    padding: 4px 10px;
+    margin: 0 5px;
+  }
+}
