@@ -1,0 +1,266 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+a, a:link, a:visited{
+    text-decoration : none;
+    color : #000;
+}
+li{
+    list-style : none;
+}
+.container{
+    width : 1200px;
+    margin : 0 auto;
+}
+header{
+    position: absolute;
+    color: white;
+    top: 0;
+    z-index: 1;
+    width : 100%;
+    padding: 1rem;
+}
+header .container{
+    display : flex;
+    justify-content : space-between;
+    align-items : center;
+    width : 100%;
+}
+header nav ul{
+    display: flex;
+    color: white;
+}
+header nav ul li{
+    margin-left: 2rem;
+    color: white;
+
+}
+header button{
+    padding: 0.5rem 1rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+
+}
+header h1 button{
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+}
+header nav ul li button{
+    font-size: 1.2rem;
+    color: white;
+}
+/*End of Header*/
+/*Start of Main*/
+main{
+    width : 100%;
+    height : 100vh;
+    color: white;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(https://user-images.githubusercontent.com/78587041/199145063-97bee34a-f6a2-4a06-a33f-e78ef3cb64e6.jpg) center center;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+main h4{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+main h2 {
+    font-size : 4rem;
+    margin : 2rem 0;
+    letter-spacing: 3px;
+}
+main p {
+    max-width :500px;
+    margin : 0 auto;
+    font-size: 1.25rem;
+}
+main h2 span::after{
+    content : "";
+    height : 60px;
+    width : 3px;
+    background-color: #fff;
+    display : inline-block;
+    animation: blink 1s ease-in-out infinite;
+}
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/*End of Main*/
+/*Start of Section About Me*/
+section{
+    padding: 5rem 0;
+}
+section:nth-child(2){
+    background-color: #f8f8f8;
+}
+section .title{
+    margin-bottom: 3rem;
+}
+section .title h4 {
+    font-size: 1.35rem;
+    color: lightcoral;
+    position: relative;
+}
+section .title h2{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+section .title p{
+    font-size: 1.5rem;
+}
+section .aboutmeDetail::after {
+    content: "";
+    display: block;
+    clear: both;
+} /*Float 속성 해제*/
+section .aboutmeDetail .leftside{
+    width : 50%;
+    float: left;
+}  /*본문넓이 절반 지정 후 사진 왼쪽 배치*/
+section .aboutmeDetail .rightside{
+    width : 50%;
+    float: left;
+    padding: 0 1rem;
+} /*본문넓이 절반 지정 후 텍스트 오른쪽 배치*/
+section .aboutmeDetail .rightside strong{
+    color: lightcoral;
+}
+section .aboutmeDetail .rightside h3{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+section .aboutmeDetail .rightside p{
+    font-size: 17px;
+    margin: 1rem 0;
+}
+section .aboutmeDetail .rightbottomside button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.5rem;
+    margin-left: 3rem;
+}
+/*End of Section About Me*/
+/*Start of Section Feature*/
+section .do-me::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+section .do-me .do-inner{
+    width : 30%;
+    padding : 2rem;
+    float : left;
+    margin-right: 5%;
+    cursor : pointer;
+}
+section .do-me .do-inner:last-child{
+    margin-right: 0;
+}
+section .do-me .do-inner .do-icon{
+    width : 100%;
+    height : 100px;
+    background-color: lightcoral;
+    margin-bottom: 1rem;
+}
+section .do-me .do-inner .content h3{
+    font-size : 2rem;
+    margin : 1rem;
+}
+section .do-me .do-inner .content p{
+    font-size : 1.15rem;
+    margin : 1rem;
+}
+section .do-me .do-inner:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+    background-color: lightcoral;
+}
+/*End of Section Feature*/
+/*Start of Section Contact*/
+section.contact .contact-me::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+section.contact .contact-me .left{
+    width : 30%;
+    float: left;
+    margin-top: 1rem;
+}
+section.contact .contact-me .right{
+    width : 65%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 1rem;
+}
+section.contact .contact-me .left .card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    display : flex;
+
+}
+section.contact .contact-me .right{
+    float: left;
+    width : 65%;
+    margin-left : 2rem;
+    border : 1px solid #ccc;
+    padding : 1rem;
+}
+section.contact .contact-me .right .form-group{
+    margin-bottom: 1rem;
+}
+section.contact .contact-me .right .form-group label{
+    display: block;
+    margin-bottom: 0.85rem;
+}
+section.contact .contact-me .right .form-group input{
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    outline: none;
+}
+section.contact .contact-me .right .form-group imput:focus{
+    border : 1px solid lightcoral;
+    box-shadow: 0 0 10px lightcoral;
+}
+section.contact .contact-me .right .form-group textarea{
+    height :300px;
+    width :100%;
+    resize : none;
+    border : 1px solid #ccc;
+}
+section.contact .contact-me .right .form-group textarea:focus{
+    outline: none;
+    border : 1px solid lightcoral;
+    box-shadow: 0 0 10px lightcoral;
+}
+section.contact .contact-me .right .right button{
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.5rem;
+    margin-left: 3rem;
+    color: lightcoral;
+}
+/*End of Section Contact*/
