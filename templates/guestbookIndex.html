@@ -25,7 +25,8 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='guestbookStyle.css') }}" />
+    <link rel="stylesheet" href="/static/css/guestbookStyle.css" />
+
     <script>
       $(document).ready(function () {
         show_comment();
@@ -37,7 +38,7 @@
 
         $.ajax({
           type: 'POST',
-          url: '/homework',
+          url: '/guestbook/comments',
           data: { name_give: name, comment_give: comment },
           success: function (response) {
             alert(response['msg']);
@@ -50,7 +51,7 @@
         $('#comment_list').empty();
         $.ajax({
           type: 'GET',
-          url: '/homework',
+          url: '/guestbook/comments',
           data: {},
           success: function (response) {
             let rows = response['comments'];
@@ -74,7 +75,7 @@
       }
     </script>
     <!--퍼옴-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
@@ -93,8 +94,7 @@
       integrity="sha512-Eenw6RBFiF4rO89LCaB5fkd4WXI4Y7GSRxrLMMWx73dZNcl+dBU3/pJtITD2gTCoEGIf/Ph3spwp0zZnF+UEJg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    ></script>
-    <script defer src="/guestbook.js"></script>
+    ></script> -->
 
     <!--퍼옴 종료-->
     <!-- 방명록 종료 -->
@@ -107,13 +107,13 @@
         <a href="/">
           <li>돈많백?</li>
         </a>
-        <a href="/public/tmi.html">
+        <a href="/tmi">
           <li>팀원TMI</li>
         </a>
-        <a href="/public/goal.html">
+        <a href="/goal">
           <li>목표</li>
         </a>
-        <a href="">
+        <a href="/guestbook">
           <li>방명록</li>
         </a>
       </ul>
