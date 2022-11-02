@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request, jsonify
+import certifi
 
 app = Flask(__name__)
 
 from pymongo import MongoClient
 
-client = MongoClient("mongodb+srv://test:sparta@cluster0.kfz2usy.mongodb.net/?retryWrites=true&w=majority")
+client = MongoClient("mongodb+srv://test:sparta@cluster0.kfz2usy.mongodb.net/?retryWrites=true&w=majority",tlsCAFile=certifi.where())
 db = client.sparta
 
 
@@ -34,4 +35,4 @@ def homework_get():
 
 
 if __name__ == '__main__':
-  app.run('0.0.0.0', port=5000, debug=True)
+  app.run('0.0.0.0', port=8000, debug=True)
