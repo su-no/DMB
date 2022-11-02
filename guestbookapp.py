@@ -7,7 +7,7 @@ db = client.sparta
 
 @app.route('/')
 def home():
-   return render_template('guestbookIndex.html')
+   return render_template('guestbook.html')
 
 @app.route("/homework", methods=["POST"])
 def homework_post():
