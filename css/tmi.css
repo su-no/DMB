@@ -112,7 +112,7 @@ p {
 }
 
 .member {
-  border-bottom: 1px solid black;
+  border-bottom: var(--padding-b-size);
   padding: 100px 0;
 }
 
