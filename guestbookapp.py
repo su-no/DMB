@@ -7,7 +7,7 @@ db = client.sparta
 
 @app.route('/')
 def home():
-   return render_template('guestbookIndex.html')
+  return render_template('guestbookIndex.html')
 
 @app.route("/homework", methods=["POST"])
 def homework_post():
@@ -29,4 +29,4 @@ def homework_get():
 
 
 if __name__ == '__main__':
-   app.run('0.0.0.0', port=5000, debug=True)
+  app.run('0.0.0.0', port=5000, debug=True)
