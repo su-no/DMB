@@ -2,6 +2,7 @@ const nav = document.querySelector('.navbar__menu');
 const btns = document.querySelector('#btn');
 btns.addEventListener('click', toggle1);
 function toggle1() {
+  console.log('토글 버튼 클릭');
   if (nav.style.display !== 'none') {
     nav.style.display = 'none';
   } else {

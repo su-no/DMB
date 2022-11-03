@@ -24,6 +24,8 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script defer src="../js/toggleButton.js"></script>
+
     <script>
       $(document).ready(function () {
         show_comment();
@@ -71,30 +73,7 @@
         });
       }
     </script>
-    <!--퍼옴-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
-      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
-      integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"
-      integrity="sha512-Eenw6RBFiF4rO89LCaB5fkd4WXI4Y7GSRxrLMMWx73dZNcl+dBU3/pJtITD2gTCoEGIf/Ph3spwp0zZnF+UEJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script defer src="../static/guestbook.js"></script>
 
-    <!--퍼옴 종료-->
     <!-- 방명록 종료 -->
   </head>
   <body>
@@ -129,12 +108,12 @@
     <!-- flask, pymongo, dnspython -->
 
     <div class="topBanner">
-      <!-- <h1>돈많백팀에 응원을 남겨주세요</h1> -->
       <img
         class="topBanner-img"
         src="https://user-images.githubusercontent.com/88768022/199632615-1dc5867c-9774-4c69-b6ca-4edae4f0a400.png"
         alt=""
       />
+      <h1 class="topBanner-title">돈많백팀에게 응원을 남겨주세요</h1>
     </div>
     <div class="inputGuestBook">
       <div class="form-floating mb-3">
@@ -150,7 +129,7 @@
         ></textarea>
         <label for="floatingTextarea2">메시지를 입력해주세요.</label>
       </div>
-      <button onclick="save_comment()" type="button" class="btn btn-dark">댓글 남기기</button>
+      <button onclick="save_comment()" type="button" class="btn btn-dark f">댓글 남기기</button>
     </div>
     <div class="guestBookCards" id="comment-list"></div>
   </body>
