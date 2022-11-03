@@ -41,6 +41,10 @@ ul {
   border-bottom: var(--padding-b-size);
 }
 
+#btn {
+  display: none;
+}
+
 .navbar__logo {
   font-size: 30px;
   font-weight: bolder;
@@ -126,8 +130,23 @@ ul {
 
 @media screen and (max-width: 768px) {
   .navbar {
+    display: flex;
     flex-direction: column;
     padding: 8px 24px;
+    align-items: stretch;
+  }
+
+  /*   버튼 클릭 이벤트 */
+  .nav2 {
+    display: flex;
+    justify-content: space-between;
+  }
+  #btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
 
   .navbar__logo {
@@ -138,6 +157,7 @@ ul {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    display: none;
   }
 
   .navbar__menu a {
@@ -145,6 +165,7 @@ ul {
   }
 
   .navbar__menu li {
+    color: var(--black-color);
     text-align: center;
     margin: 4px 0;
   }
