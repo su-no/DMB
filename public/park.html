@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-salable=none" />
+    <title>돈 많은 백수들</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/park.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+
+  <!--Header section-->
+  <body>
+    <div class="minime_wrap">
+      <div class="minime_img"></div>
+
+      <div class="title_balloon">
+        <span class="title_txt_col">
+          <span class="title_txt">
+            Hello
+            <br />
+            Stranger!
+          </span>
+        </span>
+        <i class="title_tail">
+          <svg
+            width="14"
+            height="16"
+            viewBox="0 0 14 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            data-v-31c4c148
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0 0.516602C0 9.06769 3.26836 15.9997 13.7618 15.9997L14 16.0005C13.0623 15.2567 12.2689 14.3944 11.6314 13.4229C10.4112 11.5638 10 9.73924 10 5.406V0.516602H0Z"
+              fill="#A6814C"
+              data-v-31c4c148=""
+            ></path>
+          </svg>
+        </i>
+      </div>
+    </div>
+
+    <!--Content section-->
+    <div class="des">
+      <div data-aos="fade-right">
+        <div class="left_txt">
+          <p>ur gonna figure it out.</p>
+        </div>
+      </div>
+      <div data-aos="fade-left">
+        <div class="right_txt">
+          <p>just like always have.</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Content section-->
+    <div class="intro_line">
+      <div class="intro_txt_section">
+        <p class="title">
+          WHO IS
+          <br />
+          JINYANG?
+        </p>
+      </div>
+    </div>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="img-wrap">
+            <div class="pic-wrap">
+              <img src="../img/plastic.png" class="pla-img" alt="" />
+              <div class="swiper_title">(N°221031)</div>
+              <img src="../img/1.gif" class="pic-img" style="width: 210px" ; height="310px" />
+              <div class="desc">
+                MY LITTLE PUPPY<br />
+                WE lOVE YOU! HODU
+                <div class="desc-second">1살된 막둥이 호두</div>
+                <div class="desc-third">#221024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="img-wrap2">
+            <div class="pic-wrap">
+              <img src="../img/plastic.png" class="pla-img" alt="" />
+              <div class="swiper_title">(N°181231)</div>
+              <img src="../img/3.gif" class="pic-img" style="width: 210px" ; height="310px" />
+              <div class="desc3">
+                JINYANG PARK<br />
+                I LOVE SUMMER
+                <div class="desc-second3">재미난것들로 가득했으면해</div>
+                <div class="desc-third3">#221102</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="img-wrap3">
+            <div class="pic-wrap">
+              <img src="../img/plastic.png" class="pla-img" alt="" />
+              <div class="swiper_title">(N°000000)</div>
+              <img src="../img/4.gif" class="pic-img2" style="width: 250px" ; height="310px" />
+              <div class="desc2">
+                Inspiration from nature, animals <br />
+                Music and everyday life in general.
+                <div class="desc-second2">산보다 바다</div>
+                <div class="desc-third2">#...ing</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="img-wrap4">
+            <div class="pic-wrap">
+              <img src="../img/plastic.png" class="pla-img" alt="" />
+              <div class="swiper_title">(N°4EVER)</div>
+              <img src="../img/2.gif" class="pic-img" style="width: 210px" ; height="310px" />
+              <div class="desc4">
+                친구들 가족들 <br />
+                털복숭이들<br />
+                <div class="desc-second4">건강, 행복, 돈 최고!</div>
+                <div class="desc-third4">#4EVER</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+    <script type="module" src="../js/park.js"></script>
+    <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+
+    <script>
+      const swiper = new Swiper('.mySwiper', {
+        TouchEventTarget: 'wrapper',
+
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    </script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

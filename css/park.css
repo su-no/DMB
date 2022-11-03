@@ -1,0 +1,255 @@
+:root {
+  /* color */
+  --black-color: black;
+  --ballon-color: #a6814c;
+  --ballon-txt: #f9f5ef;
+
+  /* size */
+  --basic-size: 30px;
+}
+
+* {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #e2e2e2;
+  font-family: "Noto Sans KR", sans-serif;
+  overflow-x: hidden;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+  margin-top: -689px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.minime_wrap {
+  position: relative;
+  display: flex;
+}
+
+.minime_img {
+  width: 300px;
+  height: 300px;
+  background-image: url(/img/intropark.gif);
+  background-repeat: no-repeat;
+  margin: auto;
+  margin-top: 300px;
+}
+
+.title_balloon {
+  position: absolute;
+  display: flex;
+  margin-top: 150px;
+  margin-left: 30%;
+}
+
+.title_txt_col {
+  background-color: var(--ballon-color);
+  font-size: 25px;
+  line-height: 30px;
+  padding: var(--basic-size);
+  border-radius: var(--basic-size);
+  color: var(--ballon-txt);
+  white-space: nowrap;
+  text-align: left;
+}
+
+.title_tail {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  bottom: 1px;
+  right: 1px;
+}
+
+.des {
+  font-size: 80px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.left_txt {
+  margin-top: 300px;
+}
+
+.right_txt {
+  margin-top: var(--basic-size);
+}
+
+.intro_line {
+  content: "";
+  display: block;
+  position: relative;
+  left: 30px;
+  width: calc(100% - 20px);
+  visibility: visible;
+  border-bottom: 3px solid black;
+  margin-top: -40px;
+}
+.title {
+  margin-top: 300px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.swiper-slide {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 200px;
+  margin-top: 100px;
+}
+
+.img-wrap {
+  position: relative;
+  text-align: center;
+  width: 400px;
+  height: 500px;
+  background-color: rgb(43, 167, 129);
+}
+
+.pla-img {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper_title {
+  display: block;
+  margin-left: -280px;
+  padding-top: 20px;
+  font-weight: 700;
+}
+
+.desc {
+  display: block;
+  text-align: left;
+  margin-left: 170px;
+  padding-top: 10px;
+}
+.desc-second {
+  font-weight: 700;
+  font-size: 18px;
+  margin-left: -150px;
+  margin-top: 70px;
+}
+.desc-third {
+  font-weight: 700;
+  margin-left: -150px;
+}
+.pic-img {
+  margin-top: -20px;
+  margin-left: 160px;
+}
+
+.img-wrap2 {
+  position: relative;
+  text-align: center;
+  width: 400px;
+  height: 500px;
+  background-color: rgb(233, 154, 76);
+}
+.desc3 {
+  display: block;
+  text-align: left;
+  margin-left: 170px;
+  padding-top: 10px;
+}
+.desc-second3 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-left: -150px;
+  margin-top: 70px;
+}
+.desc-third3 {
+  font-weight: 700;
+  margin-left: -150px;
+}
+.img-wrap3 {
+  position: relative;
+  text-align: center;
+  width: 400px;
+  height: 500px;
+  background-color: rgb(76, 233, 233);
+}
+
+.pic-img2 {
+  margin-top: -20px;
+  margin-left: 120px;
+}
+
+.desc2 {
+  display: block;
+  text-align: left;
+  margin-left: 130px;
+  padding-top: 10px;
+}
+.desc-second2 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-left: -110px;
+  margin-top: 70px;
+}
+.desc-third2 {
+  font-weight: 700;
+  margin-left: -110px;
+}
+
+.img-wrap4 {
+  position: relative;
+  text-align: center;
+  width: 25em;
+  height: 31.25em;
+  background-color: rgb(233, 76, 162);
+}
+.desc4 {
+  display: block;
+  text-align: left;
+  margin-left: 170px;
+  padding-top: 10px;
+}
+.desc-second4 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-left: -150px;
+  margin-top: 70px;
+}
+.desc-third4 {
+  font-weight: 700;
+  margin-left: -150px;
+}
+.swiper-pagination {
+  position: relative;
+  margin-top: -180px;
+  margin-bottom: 50px;
+}
+.swiper-pagination-bullet {
+  background-color: #000;
+  margin: 0 10px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .title_balloon {
+    margin-left: 8%;
+  }
+}
