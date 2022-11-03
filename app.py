@@ -42,8 +42,13 @@ def goal():
 def guestbook():
     return render_template('guestbook.html')
 
+@app.route("/guestbook/comments", methods=["GET"])
+def comments_get():
+    comment_list = list(db.homework.find({},{'_id':False}))
+    return jsonify({'comments':comment_list})
+
 @app.route("/guestbook/comments", methods=["POST"])
-def homework_post():
+def comments_post():
     name_receive = request.form["name_give"]
     comment_receive = request.form["comment_give"]
 
@@ -59,17 +64,18 @@ def homework_post():
     db.homework.insert_one(doc)
     return jsonify({'msg':'감사합니다!'})
 
-@app.route("/guestbook/comments", methods=["GET"])
-def homework_get():
-    comment_list = list(db.homework.find({},{'_id':False}))
-    return jsonify({'comments':comment_list})
-
 @app.route('/guestbook/comments', methods=['DELETE'])
-def homework_delete():
+def comments_delete():
   num_receive = request.form['num_give']
   db.homework.delete_one({'num': int(num_receive)})
   return jsonify({'msg': '삭제 완료!'})
-
-
+  
 if __name__ == '__main__':
     app.run('0.0.0.0', port=8000, debug=True)
+
+@app.route('/guestbook/comments/update', methods=['POST'])
+def comments_update():
+  num_receive = request.form['num_give']
+  comment_receive = request.form['comment_give']
+  db.homework.update_one({'num': int(num_receive)}, {'$set': {'comment': comment_receive}})
+  return jsonify({'msg': '수정 완료!'})
