@@ -35,6 +35,10 @@ a {
   border-bottom: var(--padding-b-size);
 }
 
+#btn {
+  display: none;
+}
+
 .navbar__logo {
   font-size: 30px;
   font-weight: bolder;
@@ -234,8 +238,10 @@ img {
 
 @media screen and (max-width: 768px) {
   .navbar {
+    display: flex;
     flex-direction: column;
     padding: 8px 24px;
+    align-items: stretch;
   }
 
   .navbar__logo {
@@ -246,6 +252,7 @@ img {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    display: none;
   }
 
   .navbar__menu a {
@@ -270,5 +277,25 @@ img {
   }
   .desc {
     font-size: 11px;
+  }
+
+  /*   버튼 클릭 이벤트 */
+  .nav2 {
+    display: flex;
+    justify-content: space-between;
+  }
+  #btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .nav3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
