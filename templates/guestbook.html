@@ -1,105 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>돈 많은 백수들</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/guestbook.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>돈 많은 백수들</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet" />
-  <!-- google icon -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-  <link rel="stylesheet" href="../static/css/guestbook.css" />
-  <link rel="stylesheet" href="../static/css/goal.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/a4c06b86b3.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-  </script>
-  <script src="https://kit.fontawesome.com/a4c06b86b3.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
-    integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"
-    integrity="sha512-Eenw6RBFiF4rO89LCaB5fkd4WXI4Y7GSRxrLMMWx73dZNcl+dBU3/pJtITD2gTCoEGIf/Ph3spwp0zZnF+UEJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="../js/toggleButton.js"></script>
 
-  <script defer src="../static/js/goal.js"></script>
-  <script defer src="../static/js/toggleButton.js"></script>
-  <script defer src="../static/js/guestbook.js"></script>
+    <script>
+      $(document).ready(function () {
+        show_comment();
+      });
 
-  <!-- 방명록 종료 -->
-</head>
+      function save_comment() {
+        let name = $("#name").val();
+        let comment = $("#comment").val();
 
-<body>
-  <nav class="navbar">
-    <div class="nav2">
-      <div class="navbar__logo"><a href="/">돈 많 백</a></div>
-      <button id="btn">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </div>
-    <div class="nav3">
-      <ul class="navbar__menu">
-        <a href="/">
-          <li>돈많백?</li>
-        </a>
-        <a href="/tmi">
-          <li>팀원TMI</li>
-        </a>
-        <a href="/goal">
-          <li>목표</li>
-        </a>
-        <a href="/guestbook">
-          <li>방명록</li>
-        </a>
-      </ul>
-    </div>
-  </nav>
+        $.ajax({
+          type: "POST",
+          url: "/homework",
+          data: { name_give: name, comment_give: comment },
+          success: function (response) {
+            alert(response["msg"]);
+            window.location.reload();
+          },
+        });
+      }
 
-  <!-- 방명록 -->
-  <!-- 1. 패키지 설치  -->
-  <!-- flask, pymongo, dnspython -->
+      function show_comment() {
+        $("#comment_list").empty();
+        $.ajax({
+          type: "GET",
+          url: "/homework",
+          data: {},
+          success: function (response) {
+            let rows = response["comments"];
+            for (let i = 0; i < rows.length; i++) {
+              let name = rows[i]["name"];
+              let comment = rows[i]["comment"];
 
-  <div class="topBanner">
-    <img class="topBanner-img"
-      src="https://user-images.githubusercontent.com/88768022/199632615-1dc5867c-9774-4c69-b6ca-4edae4f0a400.png"
-      alt="" />
-    <h1 class="topBanner-title">돈많백팀에게 응원을 남겨주세요</h1>
-  </div>
-  <div class="inputGuestBook">
-    <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="name" placeholder="url" />
-      <label for="floatingInput">이름을 입력해주세요.</label>
-    </div>
-    <div class="form-floating">
-      <textarea class="form-control" placeholder="Leave a comment here" id="comment" style="height: 100px"></textarea>
-      <label for="floatingTextarea2">메시지를 입력해주세요.</label>
-    </div>
-    <button onclick="save_comment()" type="button" class="btn btn-dark f">댓글 남기기</button>
-  </div>
-  <div class="guestBookCards" id="comment-list">
-    <div class="card">
-      <div class="card-body">
-        <blackquote class="blockquote mb-0">
-          <p>${comment}</p>
-          <footer class="blockquote-footer">${name}</footer>
-          <button id="btn-delete" onclick=`update_comment(${num})` type="button" class="btn btn-outline-primary">
-            수정
-          </button>
-          <button id="btn-delete" onclick=`delete_comment(${num})` type="button" class="btn btn-outline-primary">
-            삭제
-          </button>
-        </blackquote>
+              let temp_html = `<div class="card">
+                                        <div class = "card-body">
+                                        <blackquote class ="blockquote mb-0">
+                                            <p>${comment}</p>
+                                            <footer class="blockquote-footer">${name}</footer>
+                                            </blackquote>
+                                        </div>
+                                    </div>`;
+
+              $("#comment-list").append(temp_html);
+            }
+          },
+        });
+      }
+    </script>
+
+    <!-- 방명록 종료 -->
+  </head>
+  <body>
+    <!-- 1.Navbar Section-->
+    <nav class="navbar">
+      <div class="nav2">
+        <div class="navbar__logo"><a href="./index.html">돈 많 백</a></div>
+        <button id="btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <div class="nav3">
+        <ul class="navbar__menu">
+          <a href="./index.html">
+            <li>돈많백?</li>
+          </a>
+          <a href="./tmi.html">
+            <li>팀원TMI</li>
+          </a>
+          <a href="./goal.html">
+            <li>목표</li>
+          </a>
+          <a href="./guestbook.html">
+            <li>방명록</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 방명록 -->
+    <!-- 1. 패키지 설치  -->
+    <!-- flask, pymongo, dnspython -->
+
+    <div class="topBanner">
+      <img class="topBanner-img" src="../img/돈많백팀원들2.png" alt="" />
+      <div class="message-guide-container">
+        <div class="title">메세지 가이드</div>
       </div>
     </div>
-  </div>
-  <div id="to-top">
-    <div class="material-icons">arrow_upward</div>
-  </div>
-</body>
 
+    <div class="guide-container">
+      <div class="first-box">
+        <div class="first-num">➊</div>
+        <div class="first-txt">응원 === default</div>
+      </div>
+
+      <div class="second-box">
+        <div class="second-num">➋</div>
+        <div class="second-txt">피드백 Accept</div>
+      </div>
+
+      <div class="third-box">
+        <div class="third-num">➌</div>
+        <div class="third-txt">악플 Not defined</div>
+      </div>
+
+      <div class="fourth-box">
+        <div class="fourth-num">➍</div>
+        <div class="fourth-txt">무플 lgnore</div>
+      </div>
+    </div>
+
+    <div class="waring">
+      <div class="waring-icon">🆇</div>
+      <div class="waring-txt">PLEASE FOLLOW DIRECTIONS!</div>
+    </div>
+    <div></div>
+    <div class="inputGuestBook">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="name" placeholder="url" />
+        <label for="floatingInput">이름을 입력해주세요.</label>
+      </div>
+      <div class="form-floating">
+        <textarea
+          class="form-control"
+          placeholder="Leave a comment here"
+          id="comment"
+          style="height: 6.25rem"
+        ></textarea>
+        <label for="floatingTextarea2">메시지를 입력해주세요.</label>
+      </div>
+      <button onclick="save_comment()" type="button" class="btn btn-dark f">
+        댓글 남기기
+      </button>
+    </div>
+    <div class="guestBookCards" id="comment-list"></div>
+  </body>
 </html>
