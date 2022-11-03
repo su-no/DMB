@@ -1,13 +1,28 @@
+:root {
+  /* color*/
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --orange-color: #f58a41;
+  --background-color: #e2e2e2;
+  --dynamic-g-color: lightgreen;
+
+  /* size*/
+  --padding-size: 8px 12px;
+  --basic-size: 10px;
+  --padding-b-size: 3px solid black;
+
+  /* font */
+  --font-weight: 700;
+}
+
 body {
   font-family: 'Noto Sans KR', sans-serif;
   background-color: #e2e2e2;
-  color: #000;
 }
 
 a {
   text-decoration: none;
-  color: black;
-  line-height: 100%;
+  color: var(--black-color);
 }
 
 ol,
@@ -16,17 +31,18 @@ ul {
   padding: 0;
 }
 
+/* 1 */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
-  padding: 8px 12px;
-  border-bottom: 1px solid black;
+  background-color: var(--white-color);
+  padding: 20px 15px;
+  border-bottom: var(--padding-b-size);
 }
 
 .navbar__logo {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bolder;
 }
 
@@ -37,16 +53,19 @@ ul {
 }
 
 .navbar__menu li {
-  padding: 8px 12px;
+  padding: var(--padding-size);
   margin-left: 4px;
+  border-radius: 8px;
 }
 
 .navbar__menu li:hover {
-  color: white;
-  padding: 8px 12px;
-  background-color: black;
+  color: var(--white-color);
+  padding: var(--padding-size);
+  background-color: var(--black-color);
   border-radius: 8px;
+  transition: 0.3s;
 }
+/* /1 */
 
 /*방명록 CSS*/
 
