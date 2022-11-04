@@ -51,13 +51,16 @@ def comments_get():
 def comments_post():
     name_receive = request.form["name_give"]
     comment_receive = request.form["comment_give"]
+
     comment_list = list(db.homework.find({},{'_id':False}))
     count = len(comment_list) + 1
+
     doc = {
         'num': count,
         'name': name_receive,
         'comment': comment_receive
     }
+
     db.homework.insert_one(doc)
     return jsonify({'msg':'감사합니다!'})
 
