@@ -78,24 +78,101 @@ ul {
 }
 
 .topBanner-img {
-  width: 100%;
-  object-fit: contain;
-  padding: 50px 20px;
+  content: '';
+  display: block;
+  position: relative;
+  left: var(--basic-size);
+  width: calc(100% - 20px);
+  visibility: visible;
+  border-bottom: var(--padding-b-size);
+  padding: 50px 20px 0px 20px;
+  background-size: cover;
 }
-
-.topBanner-title {
+.message-guide-container {
+  position: relative;
+  width: 180px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white-color);
+  background-color: var(--black-color);
+  border-radius: 3px;
+  margin-top: 80px;
+}
+.title {
   text-align: center;
-  margin-bottom: 50px;
-  font-size: 4vw;
+  font-size: 25px;
+  padding-top: 5px;
 }
 
+.guide-container {
+  width: 570px;
+  height: 180px;
+  border: 5px solid black;
+  border-radius: 30px;
+  margin: 0 auto;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 190px 190px;
+  grid-template-rows: 60px 60px;
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  padding-top: 20px;
+  margin-top: 30px;
+}
+
+.first-box,
+.second-box,
+.third-box,
+.fourth-box {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-num,
+.second-num,
+.third-num,
+.fourth-num {
+  font-size: 25px;
+  padding: 0px 7px;
+}
+
+.fourth-num {
+  margin-left: -18px;
+}
+.first-txt,
+.second-txt,
+.third-txt,
+.fourth-txt {
+  font-size: 20px;
+  font-weight: 700;
+}
+.waring {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 370px;
+}
+.waring-icon {
+  font-size: 12px;
+  color: red;
+  margin-top: -1px;
+  margin-right: 5px;
+}
+.waring-txt {
+  font-size: 12px;
+  font-weight: 600;
+}
 .inputGuestBook {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   width: 95%;
   max-width: 500px;
-  margin: 20px auto 20px auto;
+  margin: 60px auto 20px auto;
 
   box-shadow: 0 0 3px 0 black;
   padding: 20px;
@@ -126,6 +203,24 @@ ul {
 .guestBookCards > .card {
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-btns {
+  display: none;
+}
+
+.comment-btns button:hover {
+  background-color: var(--dynamic-g-color);
+  border-color: var(--dynamic-g-color);
+}
+
+.card-body:hover .comment-btns {
+  display: block;
 }
 
 @media screen and (max-width: 768px) {
@@ -178,5 +273,49 @@ ul {
 
   .inputGuestBook .btn.btn-dark {
     font-size: 14px;
+  }
+
+  .guide-container {
+    width: 370px;
+    height: 130px;
+    justify-content: center;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 35px 35px;
+    grid-column-gap: 0;
+    grid-row-gap: 5px;
+    padding-top: 20px;
+  }
+  .first-num,
+  .second-num,
+  .third-num,
+  .fourth-num {
+    font-size: 15px;
+    padding: 0px 3px;
+  }
+  .fourth-num {
+    margin-left: -8px;
+  }
+  .first-txt,
+  .second-txt,
+  .third-txt,
+  .fourth-txt {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .waring {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 200px;
+  }
+  .waring-icon {
+    font-size: 12px;
+    color: red;
+    margin-top: -1px;
+    margin-right: 5px;
+  }
+  .waring-txt {
+    font-size: 10px;
+    font-weight: 600;
   }
 }

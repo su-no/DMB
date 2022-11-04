@@ -60,30 +60,31 @@ function show_comment() {
         const comment = rows[i]['comment'];
         const num = rows[i]['num'];
 
-        const temp_html = `<div class="card">
-                          <div class="card-body">
-                            <blackquote class="blockquote mb-0">
-                              <p>${comment}</p>
-                              <footer class="blockquote-footer">${name}</footer>
-                              <button
-                                id="btn-delete"
-                                onclick="update_comment(${num})"
-                                type="button"
-                                class="btn btn-outline-primary"
-                              >
-                                수정
-                              </button>
-                              <button
-                                id="btn-delete"
-                                onclick="delete_comment(${num})"
-                                type="button"
-                                class="btn btn-outline-primary"
-                              >
-                                삭제
-                              </button>
-                            </blackquote>
-                          </div>
-                        </div>`;
+        const temp_html = ` <div class="card">
+                              <div class="card-body">
+                                <blackquote class="blockquote mb-0">
+                                  <p>${comment}</p>
+                                  <footer class="blockquote-footer">${name}</footer>
+                                </blackquote>
+                                <div class="comment-btns">
+                                  <button
+                                    id="btn-delete"
+                                    onclick="update_comment(${num})"
+                                    type="button"
+                                    class="btn btn-dark f"
+                                  >
+                                    수정
+                                  </button>
+                                  <button
+                                    id="btn-delete"
+                                    onclick="delete_comment(${num})"
+                                    type="button"
+                                    class="btn btn-dark f"
+                                  >
+                                    삭제
+                                  </button>
+                                </div>
+                              </div>`;
 
         $('#comment-list').append(temp_html);
       }

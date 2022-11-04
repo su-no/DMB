@@ -69,9 +69,6 @@ def comments_delete():
   num_receive = request.form['num_give']
   db.homework.delete_one({'num': int(num_receive)})
   return jsonify({'msg': '삭제 완료!'})
-  
-if __name__ == '__main__':
-    app.run('0.0.0.0', port=8000, debug=True)
 
 @app.route('/guestbook/comments/update', methods=['POST'])
 def comments_update():
@@ -79,3 +76,6 @@ def comments_update():
   comment_receive = request.form['comment_give']
   db.homework.update_one({'num': int(num_receive)}, {'$set': {'comment': comment_receive}})
   return jsonify({'msg': '수정 완료!'})
+
+if __name__ == '__main__':
+    app.run('0.0.0.0', port=8000, debug=True)
