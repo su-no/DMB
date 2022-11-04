@@ -22,8 +22,8 @@ function update_comment(num) {
     return;
   }
   $.ajax({
-    type: 'POST',
-    url: '/guestbook/comments/update',
+    type: 'PUT',
+    url: '/guestbook/comments',
     data: { num_give: num, comment_give: newComment },
     success: function (response) {
       alert(response['msg']);

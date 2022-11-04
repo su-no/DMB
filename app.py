@@ -51,16 +51,13 @@ def comments_get():
 def comments_post():
     name_receive = request.form["name_give"]
     comment_receive = request.form["comment_give"]
-
     comment_list = list(db.homework.find({},{'_id':False}))
     count = len(comment_list) + 1
-
     doc = {
         'num': count,
         'name': name_receive,
         'comment': comment_receive
     }
-
     db.homework.insert_one(doc)
     return jsonify({'msg':'감사합니다!'})
 
@@ -70,7 +67,7 @@ def comments_delete():
   db.homework.delete_one({'num': int(num_receive)})
   return jsonify({'msg': '삭제 완료!'})
 
-@app.route('/guestbook/comments/update', methods=['POST'])
+@app.route('/guestbook/comments', methods=['PUT'])
 def comments_update():
   num_receive = request.form['num_give']
   comment_receive = request.form['comment_give']
